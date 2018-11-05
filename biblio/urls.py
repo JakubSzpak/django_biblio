@@ -15,9 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.conf.urls import url
+from shelf.views import AuthorListView, AuthorDetailView
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
+urlpatterns =[
+        url(r'^admin/', admin.site.urls),
+        url(r'^authors/$', AuthorListView.as_view(), name='author-list'),
+        url(r'^authors/(?P<pk>\d+)/$', AuthorDetailView.as_view(), name='author-detail')
 ]
-
