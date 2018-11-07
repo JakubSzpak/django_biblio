@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.conf.urls import url
 from shelf.views import AuthorListView, AuthorDetailView
 
+from contact.views import MessageAddView
 urlpatterns =[
         url(r'^admin/', admin.site.urls),
         url(r'^authors/$', AuthorListView.as_view(), name='author-list'),
-        url(r'^authors/(?P<pk>\d+)/$', AuthorDetailView.as_view(), name='author-detail')
+        url(r'^authors/(?P<pk>\d+)/$', AuthorDetailView.as_view(), name='author-detail'),
+        url(r'^contact/$', MessageAddView.as_view()),
 ]

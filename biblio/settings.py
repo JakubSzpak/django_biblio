@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',#wyswietlanie komunikatów
     'django.contrib.staticfiles', #zarzadzanie plikami statycznymi
     'shelf',
+    'contact',
 ]
 
 MIDDLEWARE = [
