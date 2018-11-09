@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles', #zarzadzanie plikami statycznymi
     'shelf',
     'contact',
+    'rental',
+
 ]
 
 MIDDLEWARE = [
